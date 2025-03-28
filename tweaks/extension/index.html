@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanki Tweaks</title>
+    <script type="module">
+        const EXTENSION_HOME_COMMON = "https://chromewebstore.google.com/detail/tanki-tweaks/khcoecipddmigggaeokhmhmhjhlpcpnb";
+
+        const browserLanguages = navigator.languages
+            .map((language) => language.split("-")[0]
+                .toLowerCase());
+        if (!browserLanguages.includes("ru")) {
+            document.body.innerHTML =
+                `<p><b>If you are not redirected automatically, <a href="${EXTENSION_HOME_COMMON}">click here</a>.</b></p>`;
+        } else {
+            document.body.innerHTML =
+                `<p><b>Если вас не перенаправило автоматически, <a href="${EXTENSION_HOME_COMMON}">нажмите сюда</a>.</b></p>`;
+        }
+        location.href = EXTENSION_HOME_COMMON;
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

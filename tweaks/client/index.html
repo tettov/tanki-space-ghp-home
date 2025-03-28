@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanki Tweaks</title>
+    <script type="module">
+        const CLIENT_HOME_COMMON = "https://github.com/tettov/tanki-tweaks-client?tab=readme-ov-file#en-tanki-tweaks-client";
+        const CLIENT_HOME_RU = "https://github.com/tettov/tanki-tweaks-client?tab=readme-ov-file#ru-tanki-tweaks-client";
+
+        const browserLanguages = navigator.languages
+            .map((language) => language.split("-")[0]
+                .toLowerCase());
+        if (!browserLanguages.includes("ru")) {
+            document.body.innerHTML =
+                `<p><b>If you are not redirected automatically, <a href="${CLIENT_HOME_COMMON}">click here</a>.</b></p>`;
+            location.href = CLIENT_HOME_COMMON;
+        } else {
+            document.body.innerHTML =
+                `<p><b>Если вас не перенаправило автоматически, <a href="${CLIENT_HOME_RU}">нажмите сюда</a>.</b></p>`;
+            location.href = CLIENT_HOME_RU;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
